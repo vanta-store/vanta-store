@@ -1,7 +1,6 @@
 import { copyFileSync, existsSync } from 'node:fs';
 
-// GitHub Pages has no rewrite rules for SPA routes. Serving the same app shell
-// as 404.html lets React Router resolve direct visits and page refreshes.
+
 if (!existsSync('dist/index.html')) {
   throw new Error('dist/index.html was not created. Run the Vite build first.');
 }
