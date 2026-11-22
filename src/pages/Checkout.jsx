@@ -45,7 +45,7 @@ export default function Checkout() {
     if (Object.keys(nextErrors).length) return;
     if (!items.length) { navigate('/cart'); return; }
     setSubmitting(true);
-    // Demonstration only: no payment, order API, or personal data is transmitted.
+
     const orderCode = `VN-${Date.now().toString().slice(-7)}`;
     clearCart();
     navigate(`/order-success?code=${orderCode}`, { state: { orderCode, itemCount, total } });
